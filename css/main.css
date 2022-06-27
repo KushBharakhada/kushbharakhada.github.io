@@ -92,7 +92,7 @@ header p {
   color: black;
 }
 
-.java, .css {
+.java, .css, .html, .javascript {
   padding: 2px;
   border-radius: 1px;
 }
@@ -103,6 +103,14 @@ header p {
 
 .css {
   background-color: rgb(225, 255, 0);
+}
+
+.html {
+  background-color: rgb(0, 183, 255);
+}
+
+.javascript {
+  background-color: rgb(0, 255, 55);
 }
 
 .project a {
