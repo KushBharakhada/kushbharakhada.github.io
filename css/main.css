@@ -1,3 +1,16 @@
+/* Author: Kush Bharakhada */
+
+/* ~~~~~~~~~~~~~ GENERAL VARIABLES ~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+:root {
+  --main-background-colour: black;
+  --header-and-footer-font-colour: white;
+  --non-important-text-colour: rgb(154, 154, 154);
+  --project-background-colour: rgb(49, 49, 49);
+  --project-box-text-colour: rgb(230, 230, 230);
+}
+
 html, body {
   height: 100vh;
   width: 100%;
@@ -8,10 +21,10 @@ body {
   text-align: center;
   justify-content: center;
   align-items: center;
-  background: black;
+  background: var(--main-background-colour);
   margin: 0;
   padding: 0;
-  color: white;
+  color: var(--header-and-footer-font-colour);
   font-size: 1em;
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -20,6 +33,9 @@ body {
   margin: 0 auto;
   width: 80%;
 }
+
+/* ~~~~~~~~~~~~~~~~~~~ HEADER ~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 .typewriter {
   overflow: hidden;
@@ -46,11 +62,14 @@ header p {
   font-size: 1.2em;
 }
 
+/* ~~~~~~~~~~~~~~~~~~~~~ MAIN ~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
 .project-image {
-  max-width: 400px;
-  max-height: 250px;
-  min-width: 300px;
-  min-height: 188px;
+  min-width: 400px;
+  min-height: 250px;
+  width: 400px;
+  height: 250px;
   transform: translateX(-6rem);
   position: relative;
 }
@@ -59,15 +78,14 @@ header p {
   border-radius: 10px;
   box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.45);
   width: 100%;
-  
 }
 
 .project {
-  color: rgb(230, 230, 230);
+  color: var(--project-box-text-colour);
   margin: 40px auto;
   max-width: 100rem;
   padding: 2rem;
-  background-color: rgb(49, 49, 49);
+  background-color: var(--project-background-colour);
   border: 2px solid grey;
   display: flex;
   border-radius: 0.8rem;
@@ -84,7 +102,7 @@ header p {
   padding: 0;
 }
 
-#language {
+#languages {
   width: fit-content;
   margin: 5px auto;
   padding: 0px 10px;
@@ -97,25 +115,23 @@ header p {
   border-radius: 1px;
 }
 
+/* Language colours */
 .java {
   background-color: rgb(255, 0, 0);
 }
-
 .css {
   background-color: rgb(225, 255, 0);
 }
-
 .html {
   background-color: rgb(0, 183, 255);
 }
-
 .javascript {
   background-color: rgb(0, 255, 55);
 }
 
 .project a {
   float: right;
-  color: rgb(154, 154, 154);
+  color: var(--non-important-text-colour);
 }
 
 #date {
@@ -123,18 +139,21 @@ header p {
 }
 
 .project-info {
-  color: rgb(154, 154, 154);
+  color: var(--non-important-text-colour);
   margin: 10px;
   display: inline;
 }
 
+/* ~~~~~~~~~~~~~~~~~~~~ FOOTER ~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
 .small-text {
   font-size: 0.7em;
-  color: rgb(154, 154, 154);
+  color: var(--non-important-text-colour);
 }
 
 footer {
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 }
 
 footer p {
@@ -147,6 +166,9 @@ footer img {
   border-radius: 25px;
 }
 
+/* ~~~~~~~~~~~~~~~~ MEDIA QUERIES ~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
 @media screen and (max-width: 1024px) {
   .project-image {
     transform: translateX(-4rem);
@@ -154,7 +176,7 @@ footer img {
   
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 868px) {
   header {
     margin: 20px 0 75px 0;
   }
@@ -176,7 +198,7 @@ footer img {
     font-size: 1em;
   }
 
-  .project p, .project-info, footer p, #language {
+  .project p, .project-info, footer p, #languages {
     font-size: 0.7em;
   }
 
@@ -185,13 +207,17 @@ footer img {
   }
 
   .small-screen-adjustment {
-    transform: translateY(-2rem);
+    transform: translateY(-4rem);
   }
 
   .project-image {
     transform: translate(0, -4rem);
     margin: 0 auto;
-    min-width: auto;
+    min-width: 200px;
+    min-height: 188px;
+    width: 200px;
+    height: 188px;
+    
     
   }
   
