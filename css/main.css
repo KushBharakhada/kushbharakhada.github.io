@@ -6,9 +6,17 @@
 :root {
   --main-background-colour: black;
   --header-and-footer-font-colour: white;
-  --non-important-text-colour: rgb(154, 154, 154);
+  --date-and-view-project-colour: rgb(154, 154, 154);
   --project-background-colour: rgb(49, 49, 49);
   --project-box-text-colour: rgb(230, 230, 230);
+}
+
+.light-mode {
+  --main-background-colour: white;
+  --header-and-footer-font-colour: black;
+  --project-background-colour: rgb(112, 112, 112);
+  --date-and-view-project-colour: white;
+
 }
 
 html, body {
@@ -60,6 +68,18 @@ header h1 {
 
 header p {
   font-size: 1.2em;
+}
+
+#dark-light-mode-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 30px;
+  transition: all 0.2s ease-in-out;
+}
+
+#dark-light-mode-icon:hover {
+  transform: scale(1.2);
 }
 
 /* ~~~~~~~~~~~~~~~~~~~~~ MAIN ~~~~~~~~~~~~~~~~~~~~ */
@@ -132,7 +152,7 @@ header p {
 
 .project a {
   float: right;
-  color: var(--non-important-text-colour);
+  color: var(--date-and-view-project-colour);
 }
 
 #date {
@@ -140,7 +160,7 @@ header p {
 }
 
 .project-info {
-  color: var(--non-important-text-colour);
+  color: var(--date-and-view-project-colour);
   margin: 10px;
   display: inline;
 }
@@ -150,7 +170,7 @@ header p {
 
 .small-text {
   font-size: 0.7em;
-  color: var(--non-important-text-colour);
+  color: rgb(154, 154, 154);
 }
 
 footer {
@@ -218,8 +238,6 @@ footer img {
     min-height: 188px;
     width: 200px;
     height: 188px;
-    
-    
   }
   
 }
