@@ -98,7 +98,7 @@ header p {
   border-radius: 10px;
   box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.45);
   width: 100%;
-  border: 1px solid grey;
+  border: 1px solid rgb(0, 242, 255);
 }
 
 .project {
@@ -107,7 +107,8 @@ header p {
   max-width: 100rem;
   padding: 2rem;
   background-color: var(--project-background-colour);
-  border: 2px solid grey;
+  border: 2px solid rgb(0, 242, 255);
+  box-shadow: 0px 0px 30px 2px rgb(0, 242, 255);
   display: flex;
   border-radius: 0.8rem;
   transition: all 0.2s ease-in-out;
