@@ -8,10 +8,10 @@ body {
   text-align: center;
   justify-content: center;
   align-items: center;
-  background: white;
+  background: black;
   margin: 0;
   padding: 0;
-  color: black;
+  color: white;
   font-size: 1em;
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -20,7 +20,6 @@ body {
   margin: 0 auto;
   width: 80%;
 }
-
 
 .typewriter {
   overflow: hidden;
@@ -39,8 +38,12 @@ header {
   margin: 20px 0 50px 0;
 }
 
-header h1{
+header h1 {
   font-size: 2em;
+}
+
+header p {
+  font-size: 1.2em;
 }
 
 .project-image {
@@ -61,30 +64,81 @@ header h1{
   max-width: 100rem;
   padding: 2rem;
   background-color: rgb(49, 49, 49);
-  box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.5);
+  border: 2px solid grey;
+  /*box-shadow: 5px 10px 20px rgba(255, 255, 255, 0.5);*/
   display: flex;
   border-radius: 0.8rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.project:hover {
+  transform: scale(1.02);
+  background-color: rgb(62, 62, 62);
+}
+
+.project h1 {
+  margin: 0;
+  padding: 0;
 }
 
 #language {
   width: fit-content;
   background-color: rgb(125, 0, 0);
-  margin: 0 auto;
+  margin: 5px auto;
   padding: 0px 10px;
   border-radius: 2px;
 }
 
-#date {
+.project a {
+  float: right;
   color: rgb(154, 154, 154);
+}
+
+#date {
+  float: left;
+}
+
+.project-info {
+  color: rgb(154, 154, 154);
+  margin: 10px;
+  display: inline;
+}
+
+.small-text {
+  font-size: 0.7em;
+  color: rgb(154, 154, 154);
+}
+
+footer {
+  margin-bottom: 10px;
+}
+
+footer p {
+  padding: 0;
+  margin: 10px 0;
+}
+
+footer img{
+  width: 50px;
+  border-radius: 25px;
 }
 
 @media screen and (max-width: 868px) {
   .project {
-    flex-direction: column;
+    flex-direction: column;  
+  }
+
+  .small-screen-adjustment {
+    transform: translateY(-3rem);
   }
 
   .project-image {
     transform: translate(0, -5rem);
+  }
+
+  .project-image img {
+    width: 175px;
+    height: 100px;
   }
 }
 
