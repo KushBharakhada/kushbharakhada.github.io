@@ -47,15 +47,19 @@ header p {
 }
 
 .project-image {
-  transform: translateX(-8rem);
+  max-width: 400px;
+  max-height: 250px;
+  min-width: 300px;
+  min-height: 188px;
+  transform: translateX(-6rem);
   position: relative;
 }
 
 .project-image img {
-  width: 300px;
-  height: 200px;
   border-radius: 10px;
   box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.45);
+  width: 100%;
+  
 }
 
 .project {
@@ -65,7 +69,6 @@ header p {
   padding: 2rem;
   background-color: rgb(49, 49, 49);
   border: 2px solid grey;
-  /*box-shadow: 5px 10px 20px rgba(255, 255, 255, 0.5);*/
   display: flex;
   border-radius: 0.8rem;
   transition: all 0.2s ease-in-out;
@@ -83,10 +86,23 @@ header p {
 
 #language {
   width: fit-content;
-  background-color: rgb(125, 0, 0);
   margin: 5px auto;
   padding: 0px 10px;
   border-radius: 2px;
+  color: black;
+}
+
+.java, .css {
+  padding: 2px;
+  border-radius: 1px;
+}
+
+.java {
+  background-color: rgb(255, 0, 0);
+}
+
+.css {
+  background-color: rgb(225, 255, 0);
 }
 
 .project a {
@@ -118,28 +134,59 @@ footer p {
   margin: 10px 0;
 }
 
-footer img{
+footer img {
   width: 50px;
   border-radius: 25px;
 }
 
-@media screen and (max-width: 868px) {
+@media screen and (max-width: 1024px) {
+  .project-image {
+    transform: translateX(-4rem);
+  }
+  
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    margin: 20px 0 75px 0;
+  }
+
+  header h1 {
+    font-size: 1.2em;
+  }
+  
+  header p {
+    font-size: 0.8em;
+  }
+
   .project {
-    flex-direction: column;  
+    flex-direction: column;
+    margin-bottom: 60px; 
+  }
+
+  .project h1 {
+    font-size: 1em;
+  }
+
+  .project p, .project-info, footer p, #language {
+    font-size: 0.7em;
+  }
+
+  .small-text {
+    font-size: 0.5em;
   }
 
   .small-screen-adjustment {
-    transform: translateY(-3rem);
+    transform: translateY(-2rem);
   }
 
   .project-image {
-    transform: translate(0, -5rem);
+    transform: translate(0, -4rem);
+    margin: 0 auto;
+    min-width: auto;
+    
   }
-
-  .project-image img {
-    width: 175px;
-    height: 100px;
-  }
+  
 }
 
 
